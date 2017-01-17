@@ -1,6 +1,6 @@
 # PHRASES REST Microservice
 
-REST micro-service in Java/Groovy that takes as input a string 
+REST micro-service that takes as input a string 
 parameter and returns a list of matched phrases from a dictionary list.
 
 Runs on default port `8080`.

@@ -1,5 +1,6 @@
 package com.yourmd.phrases.repositories;
 
+import com.yourmd.phrases.model.Phrase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -34,8 +35,8 @@ public class PhraseRepositoryTest {
     @Test
     public void concurrentIterationTest() throws Exception {
 
-        Iterator<String> iterator1 = phraseRepository.getAll().iterator();
-        Iterator<String> iterator2 = phraseRepository.getAll().iterator();
+        Iterator<Phrase> iterator1 = phraseRepository.getPhrases().iterator();
+        Iterator<Phrase> iterator2 = phraseRepository.getPhrases().iterator();
 
         assertNotEquals(iterator1, iterator2);
 

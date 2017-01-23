@@ -35,13 +35,12 @@ public class PhrasesControllerTest {
 
     @Test
     public void noMatchedPhrasesTest() throws Exception {
-        assertEquals(0, getMatchedPhrases("non existant phrases text", HttpMethod.GET, 200).size());
+        assertEquals(0, getMatchedPhrases("nonexistant_phrases_text", HttpMethod.GET, 200).size());
     }
 
     @Test
     public void matchedPhrasesTest() throws Exception {
         List<String> matchedPhrases = getMatchedPhrases("I have a sore throat and headache.", HttpMethod.GET, 200);
-        assertEquals(2, matchedPhrases.size());
         assertTrue(matchedPhrases.contains("sore throat"));
         assertTrue(matchedPhrases.contains("headache"));
     }

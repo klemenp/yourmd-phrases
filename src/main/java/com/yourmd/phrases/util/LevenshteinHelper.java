@@ -28,6 +28,14 @@ public class LevenshteinHelper {
         return (longerLength - StringUtils.getLevenshteinDistance(longer, shorter)) / (double) longerLength;
     }
 
+    /**
+     * Returns the similarity of phrases as a number between 0 and 1.
+     *
+     * @param inpustTextWords
+     * @param phraseWords
+     * @param wordMatchTreshold
+     * @return
+     */
     public static double similarityOfPhrases(List<String> inpustTextWords, List<String> phraseWords, double wordMatchTreshold) {
         int matchCount = maxPhraseWordMatchCount(inpustTextWords, phraseWords, wordMatchTreshold);
         return ((double)matchCount) / (double) phraseWords.size();

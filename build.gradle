@@ -14,7 +14,7 @@ apply plugin: 'org.springframework.boot'
 
 jar {
     baseName = 'yourmd-matchPhrases'
-    version =  '0.1.0'
+    version =  '0.2.0'
 }
 
 repositories {
@@ -31,6 +31,8 @@ dependencies {
     }
     compile ("org.slf4j:slf4j-api:1.7.2")
     compile ("org.slf4j:slf4j-log4j12:1.7.2")
+
+    compile 'org.apache.commons:commons-lang3:3.5'
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
